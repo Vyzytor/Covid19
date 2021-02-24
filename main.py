@@ -1,5 +1,8 @@
 from flask import Flask
 from flask import jsonify
+from google.cloud import bigquery
+
+
 
 app = Flask(__name__)
 
