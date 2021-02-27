@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from flask import jsonify
 import google.auth
 from google.cloud import bigquery
-from google.cloud import bigquery_storage
+#from google.cloud import bigquery_storage
 
 app = Flask(__name__)
 
