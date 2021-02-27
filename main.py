@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from flask import jsonify
 import google.auth
 from google.cloud import bigquery
