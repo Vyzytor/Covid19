@@ -9,7 +9,7 @@ from google.oauth2 import service_account
 #project_id = 'covid19-302022'
 
 
-credentials, your_project_id = google.auth.default(
+credentials, project_id = google.auth.default(
     scopes=["https://www.googleapis.com/auth/cloud-platform"]
 )
 
