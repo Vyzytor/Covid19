@@ -11,6 +11,8 @@ from google.oauth2 import service_account
 
 credentials, your_project_id = google.auth.default(
     scopes=["https://www.googleapis.com/auth/cloud-platform"]
+)
+
 bqclient = bigquery.Client(credentials= credentials,project=project_id)
 bqstorageclient = bigquery_storage.BigQueryReadClient(credentials=credentials)
     
