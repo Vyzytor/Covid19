@@ -4,8 +4,6 @@ import google.auth
 from google.cloud import bigquery
 #from google.cloud import bigquery_storage
 
-
-
 app = Flask(__name__)
 
 #@app.route('/')
