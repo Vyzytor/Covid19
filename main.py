@@ -14,7 +14,7 @@ credentials, project_id = google.auth.default(
 )
 
 bqclient = bigquery.Client(credentials= credentials,project=project_id)
-bqstorageclient = bigquery_storage.BigQueryReadClient(credentials=credentials)
+#bqstorageclient = bigquery_storage.BigQueryReadClient(credentials=credentials)
     
 app = Flask(__name__)
 
