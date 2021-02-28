@@ -14,7 +14,7 @@ credentials, project_id = google.auth.default(
 )
 
 bqclient = bigquery.Client(credentials= credentials,project=project_id)
-bqstorageclient = bigquery_storage.BigQueryReadClient(credentials=credentials)
+#bqstorageclient = bigquery_storage.BigQueryReadClient(credentials=credentials)
     
 app = Flask(__name__)
 
@@ -40,9 +40,9 @@ app = Flask(__name__)
 def homepage():
     return render_template("page.html", title="HOME PAGE")
 
-@app.route("/docs")
+@app.route("/predict")
 def docs():
-    return render_template("page.html", title="docs page")
+    return render_template("page.html", title="predict page")
 
 @app.route("/about")
 def about():
