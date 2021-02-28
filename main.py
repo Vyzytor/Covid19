@@ -40,9 +40,9 @@ app = Flask(__name__)
 def homepage():
     return render_template("page.html", title="HOME PAGE")
 
-@app.route("/docs")
+@app.route("/predict")
 def docs():
-    return render_template("page.html", title="docs page")
+    return render_template("page.html", title="predict page")
 
 @app.route("/about")
 def about():
