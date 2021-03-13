@@ -106,14 +106,22 @@ def predict():
         CasesDate = row.cases_date_history
         QtyCases = row.cases_history_value
 
-    val = jsonify(CasesPredictionDate=CasesPredictionDate.strftime('%m/%d/%Y'),
-                  PredictedCases=PredCases,
-                  DeathsPredictionDate=DeathsPredictionDate.strftime('%m/%d/%Y'),
-                  PredictedDeaths=PredDeaths,
-                  DeathsDate=DeathsDate.strftime('%m/%d/%Y'),
-                  MostRecentDeathCount=QtyDeaths,
-                  CasesDate=CasesDate.strftime('%m/%d/%Y'),
-                  MostRecentCasesCount=QtyCases)
+    
+    # this would not present the data, want to debug later
+    #val2 = jsonify(CasesPredictionDate=CasesPredictionDate.strftime('%m/%d/%Y'),
+    #              PredictedCases=PredCases,
+    #              DeathsPredictionDate=DeathsPredictionDate.strftime('%m/%d/%Y'),
+    #              PredictedDeaths=PredDeaths,
+    #              DeathsDate=DeathsDate.strftime('%m/%d/%Y'),
+    #              MostRecentDeathCount=QtyDeaths,
+    #              CasesDate=CasesDate.strftime('%m/%d/%Y'),
+    #              MostRecentCasesCount=QtyCases)
+
+    val = {"CasesPredictionDate":CasesPredictionDate.strftime('%m/%d/%Y'), "PredictedCases":PredCases,
+            "DeathsPredictionDate":DeathsPredictionDate.strftime('%m/%d/%Y'),"PredictedDeaths":PredDeaths,
+           "DeathsDate":DeathsDate.strftime('%m/%d/%Y'),"MostRecentDeathCount":QtyDeaths,
+           "CasesDate":CasesDate.strftime('%m/%d/%Y'),"MostRecentCasesCount":QtyCases}
+
 
     return render_template("page.html", title="Covid19: Current Stats and Predictions",jsonfile = val )
 
