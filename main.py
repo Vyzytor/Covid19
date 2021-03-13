@@ -107,10 +107,14 @@ def predict():
         CasesDate = row.cases_date_history
         QtyCases = row.cases_history_value
 
-    val = {"CasesPredictionDate":CasesPredictionDate.strftime('%m/%d/%Y'), "PredictedCases":PredCases,
-            "DeathsPredictionDate":DeathsPredictionDate.strftime('%m/%d/%Y'),"PredictedDeaths":PredDeaths,
-            "DeathsDate":DeathsDate.strftime('%m/%d/%Y'),"MostRecentDeathCount":QtyDeaths,
-            "CasesDate":CasesDate.strftime('%m/%d/%Y'),"MostRecentCasesCount":QtyCases}
+    val = jsonify(CasesPredictionDate=CasesPredictionDate.strftime('%m/%d/%Y'),
+                  PredictedCases=PredCases,
+                  DeathsPredictionDate=DeathsPredictionDate.strftime('%m/%d/%Y'),
+                  PredictedDeaths=PredDeaths,
+                  DeathsDate=DeathsDate.strftime('%m/%d/%Y'),
+                  MostRecentDeathCount=QtyDeaths,
+                  CasesDate=CasesDate.strftime('%m/%d/%Y'),
+                  MostRecentCasesCount=QtyCases)
 
     return render_template("page.html", title="Covid19: Current Stats and Predictions",jsonfile = val )
 
