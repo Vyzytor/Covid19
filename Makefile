@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 lint:
-	
+	main.py
 
 
 
