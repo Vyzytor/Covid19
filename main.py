@@ -1,9 +1,7 @@
 from flask import Flask, render_template
-from flask import jsonify
+#from flask import jsonify
 import google.auth
 from google.cloud import bigquery
-from google.cloud import storage
-
 
 app = Flask(__name__)
 @app.route('/')
