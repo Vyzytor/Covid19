@@ -1,21 +1,15 @@
 from flask import Flask, render_template, request
 from flask import jsonify
 import json
-import html
 import google.auth
 from google.cloud import bigquery
 from google.cloud import storage
 from google.oauth2 import service_account
 
-
-import argparse
-import googleapiclient.discovery
-
-
 app = Flask(__name__)
 @app.route('/')
 def predict():
-    
+ 
 
 
     credentials, project_id = google.auth.default(
