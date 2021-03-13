@@ -4,7 +4,7 @@ import json
 import google.auth
 from google.cloud import bigquery
 from google.cloud import storage
-from google.oauth2 import service_account
+
 
 app = Flask(__name__)
 @app.route('/')
