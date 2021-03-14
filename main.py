@@ -121,7 +121,7 @@ def predict():
            "CasesDate":CasesDate.strftime('%m/%d/%Y'),"MostRecentCasesCount":QtyCases}
 
 
-    return render_template("page.html", title="Covid19: Current Stats and Predictions",jsonfile = val )
+    return render_template("page.html", title="COVID19: Current Stats and Predictions",jsonfile = val )
 
   
 if __name__ == '__main__':
